@@ -1,0 +1,262 @@
+.image-generation-app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.center {
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.image-container {
+  /* display: flex; */
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+label {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.loader-container {
+  margin-top: -280px;
+  margin-left: -5px;
+  z-index: 999;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-position1 {
+  position: relative;
+  margin-top: -140px;
+}
+
+.loader-position2 {
+  position: relative;
+  margin-top: -60px;
+}
+
+.loader-container {
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+    margin-top: -290px;
+    width: 220px;
+    height: 220px;
+  }
+
+  /* For screens larger than 768px */
+  @media (min-width: 768px) {
+    margin-top: -270px;
+    width: 220px;
+    height: 220px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  .center {
+    text-align: center;
+  }
+
+  .comic-canvas {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .image-generation-app {
+    margin: 20px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  .row {
+    flex-direction: column; /* Change image items to stack vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .image-container {
+    flex-direction: row; /* Change back to default layout for larger screens */
+  }
+
+  .image-item {
+    width: 45%;
+    margin: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .caption-box {
+    width: 90%;
+  }
+
+  .caption-box input {
+    width: 100%;
+  }
+}
+
+/* For screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust styles for medium-sized screens */
+  .image-item {
+    width: 45%;
+    margin: 10px;
+  }
+  .image-container {
+    flex-direction: row;
+  }
+  .center {
+    text-align: center;
+  }
+
+  .comic-canvas {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  button {
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+}
+
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+  .image-container {
+    flex-direction: row;
+  }
+
+  .image-item {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .caption-box {
+    width: 70%;
+  }
+
+  .caption-box input {
+    width: 80%;
+  }
+}
+
+.caption-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 0px;
+  background-color: white;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caption-box input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.caption-inputs {
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.btn1 {
+  background-color: orange;
+}
+
+.btn2 {
+  background-color: red;
+}
+.btn3 {
+  background-color: green;
+}
+.btn4 {
+  background-color: lightseagreen;
+}
+
+/* Hover Effect */
+/* button:hover {
+  background-color: grey;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+} */
+
+/* Click Effect */
+/* button:active {
+  background-color: black;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+} */

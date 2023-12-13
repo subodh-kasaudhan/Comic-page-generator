@@ -1,0 +1,292 @@
+.image-generation-app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.image-container {
+  /* display: flex; */
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+label {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* .image-item {
+  width: 200px;
+  margin-bottom: 20px;
+} */
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.loader-container {
+  /* position: relative; */
+  margin-top: -280px;
+  margin-left: -5px;
+  z-index: 999;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Apply background blur */
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-position1 {
+  position: relative;
+  margin-top: -140px;
+}
+
+.loader-position2 {
+  position: relative;
+  margin-top: -60px;
+}
+
+.loader-container {
+  /* Existing styles... */
+
+  /* Media queries for responsiveness */
+
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+    margin-top: -120px; /* Adjust margin-top for smaller screens */
+    width: 120px; /* Adjust width for smaller screens */
+    height: 120px; /* Adjust height for smaller screens */
+  }
+
+  /* For screens larger than 768px */
+  @media (min-width: 768px) {
+    margin-top: -270px; /* Adjust margin-top for larger screens */
+    width: 220px; /* Adjust width for larger screens */
+    height: 220px; /* Adjust height for larger screens */
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Your existing styles */
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  .center {
+    text-align: center; /* Center align content */
+  }
+
+  .comic-canvas {
+    width: 80%; /* Adjust canvas width for smaller screens */
+    margin: 20px auto; /* Center the canvas */
+  }
+
+  .image-generation-app {
+    margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  input[type="text"] {
+    width: 80%; /* Make the input width responsive */
+  }
+
+  .row {
+    flex-direction: column; /* Change image items to stack vertically */
+    align-items: center; /* Center align image items */
+    gap: 10px; /* Reduce gap between image items */
+  }
+
+  .image-container {
+    flex-direction: row; /* Change back to default layout for larger screens */
+  }
+
+  .image-item {
+    width: 45%; /* Adjust image width for medium screens */
+    margin: 10px; /* Add margin between image items */
+  }
+
+  button {
+    /* Adjustments for smaller screens... */
+    padding: 8px 16px;
+    font-size: 14px;
+    /* Other adjustments for smaller screens... */
+  }
+
+  .caption-box {
+    /* Adjustments for smaller screens... */
+    width: 90%; /* Example adjustment */
+  }
+
+  .caption-box input {
+    /* Adjustments for smaller screens... */
+    width: 100%; /* Example adjustment */
+  }
+}
+
+/* For screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust styles for medium-sized screens */
+  .image-item {
+    width: 45%; /* Adjust image width for medium screens */
+    margin: 10px; /* Add margin between image items */
+  }
+  .image-container {
+    flex-direction: row; /* Change back to default layout for larger screens */
+  }
+  /* ...other styles */
+  .center {
+    text-align: center; /* Center align content */
+  }
+
+  .comic-canvas {
+    width: 50%; /* Adjust canvas width for larger screens */
+    margin: 20px auto; /* Center the canvas */
+  }
+
+  button {
+    /* Adjustments for medium-sized screens... */
+    padding: 10px 18px;
+    font-size: 16px;
+    /* Other adjustments for medium-sized screens... */
+  }
+}
+
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+  /* Adjust styles for larger screens */
+  .image-container {
+    flex-direction: row; /* Change back to default layout for larger screens */
+  }
+
+  .image-item {
+    width: 200px; /* Restore original width for image items */
+    margin-bottom: 20px; /* Restore original margin */
+  }
+  /* ...other styles */
+
+  button {
+    /* Adjustments for larger screens... */
+    padding: 12px 20px;
+    font-size: 18px;
+    /* Other adjustments for larger screens... */
+  }
+}
+/* Existing styles */
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px */
+
+/* For screens larger than 768px */
+
+@media (min-width: 768px) {
+  .caption-box {
+    /* Adjustments for larger screens... */
+    width: 70%; /* Example adjustment */
+  }
+
+  .caption-box input {
+    /* Adjustments for larger screens... */
+    width: 80%; /* Example adjustment */
+  }
+
+  /* Other adjustments for larger screens... */
+}
+
+.caption-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Adjust width as needed */
+  padding: 0px;
+  background-color: white;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caption-box input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.caption-inputs {
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.btn1 {
+  background-color: orange;
+}
+
+.btn2 {
+  background-color: red;
+}
+.btn3 {
+  background-color: green;
+}
+.btn4 {
+  background-color: lightseagreen;
+}
+
+/* Hover Effect */
+hover {
+  background-color: grey; /* Darker blue on hover */
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+}
+
+/* Click Effect */
+button:active {
+  background-color: black; /* Even darker blue when clicked */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); /* Smaller shadow when clicked */
+}
